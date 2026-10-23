@@ -20,6 +20,24 @@
   <input type="submit" value="Go"/>
 </form>
 
+<% if (notice) { %>
+  <p><%= notice %></p>
+<% } %>
+<% if (dbError) { %>
+  <p>Could not reach the customers collection: <%= dbError %></p>
+<% } %>
+
+<b>First 10 customers</b>
+<% if (customers && customers.length) { %>
+  <ol>
+    <% customers.forEach(function(customer) { %>
+      <li><%= customer.name %> (<%= customer.email %>)</li>
+    <% }); %>
+  </ol>
+<% } else { %>
+  <p>No customers saved yet.</p>
+<% } %>
+
 <br><br><br>
 <hr>
 
