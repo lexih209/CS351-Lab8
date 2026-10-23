@@ -1,0 +1,13 @@
+# MongoDB credentials
+.env
+.env.*
+
+# Installed dependencies
+node_modules/
+
+# Editor files
+.vscode/
+.idea/
+
+# Local database testing
+testDatabase.js
